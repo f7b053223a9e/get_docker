@@ -23,7 +23,8 @@ set -e
 #     aws s3 cp --acl public-read hack/install.sh s3://get.docker.com/index
 #
 
-DOCKER_VERSION=1.10.3-0~wily
+# export is mandatory to make this work with $sh_c
+export DOCKER_VERSION=1.10.3-0~wily
 url="https://get.docker.com/"
 apt_url="https://apt.dockerproject.org"
 yum_url="https://yum.dockerproject.org"
